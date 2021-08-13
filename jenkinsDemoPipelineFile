@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Initiate') {
+            steps {
+                echo 'Initiate the Pipeline'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Initiated the Build'
+                echo 'Build Completed'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing the build'
+                echo 'Testing Completed'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Release the Build for Deploy'
+                echo 'Ready to Deploy'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Initiate the Deployment'
+                echo 'Deployment Successful'
+            }
+        }        
+    }
+}
